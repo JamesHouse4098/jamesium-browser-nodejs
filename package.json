@@ -1,0 +1,45 @@
+{
+  "name": "jamesium-browser",
+  "version": "1.0.0",
+  "description": "A Chrome-like browser using Electron + Chromium",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "James Nguyen",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^35.2.1",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.example.jamesium",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "package.json",
+      "main.js",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "tar.gz"
+      ]
+    }
+  }
+}

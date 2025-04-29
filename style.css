@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+
+#navbar button, #navbar input {
+    margin-right: 5px;
+    height: 30px;
+    font-size: 16px;
+}
+
+#url {
+    flex-grow: 1;
+    padding: 5px;
+}
+
+webview {
+    width: 100%;
+    height: calc(100vh - 41px); /* trừ chiều cao navbar */
+}
